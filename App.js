@@ -1,12 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>TELL ME</Text>
-      <StatusBar style="auto" />
+      <Image
+        style={styles.logo}
+        source={{uri: 'https://i.ibb.co/zsD9Zyw/logo-compelta.png'}}
+      />
     </View>
   );
 }
@@ -17,5 +18,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#F2D43A',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logo: {
+    height: 110,
+    width: 210,
   },
 });
