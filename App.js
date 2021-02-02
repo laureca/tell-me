@@ -18,18 +18,18 @@ const styles = StyleSheet.create({
 
   btnEntrar: {
     height: 40,
-    width: 330,
+    width: '100%',
     backgroundColor: '#242424',
     borderRadius: 10,
     flexDirection: "column",
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '32px 0',
+    margin: '32px',
   },
   
   btnCadastrar: {
     height: 40,
-    width: 330,
+    width: '100%',
     backgroundColor: 'transparent',
     borderWidth: 2,
     borderStyle: "solid",
