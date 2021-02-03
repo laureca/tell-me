@@ -1,37 +1,47 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button, Alert, TouchableOpacity } from 'react-native';
 
-import logo from './images/logo-completa.png';
+import logo from './assets/images/logo-completa.png';
 
 const styles = StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: '#F2D43A',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: "column",
   },
 
   logo: {
-    height: 110,
-    width: 210,
+    height: 105,
+    width: 190.98,
   },
 
   btnEntrar: {
     height: 40,
-    width: '100%',
+    width: '85%',
     backgroundColor: '#242424',
     borderRadius: 10,
     flexDirection: "column",
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '32px',
+    marginBottom: 40,
+  },
+
+  textEntrar: {
+    textAlign: 'center',
+    color: 'white',
+    textTransform: 'uppercase',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   
   btnCadastrar: {
     height: 40,
-    width: '100%',
+    width: '85%',
     backgroundColor: 'transparent',
-    borderWidth: 2,
+    borderWidth: 4,
     borderStyle: "solid",
     borderColor: '#242424',
     borderRadius: 10,
@@ -39,27 +49,48 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  textCadastrar: {
+    textAlign: 'center',
+    color: '#242424',
+    textTransform: 'uppercase',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  
 });
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Image  
-        style={styles.logo}
-        source={logo}
-      />
-      <TouchableOpacity
-        style={styles.btnEntrar}
-        onPress={() => Alert.alert('Simple Button pressed')}
-      >
-        <Text style={{textAlign: 'center'}}>Entrar</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.btnCadastrar}
-        onPress={() => Alert.alert('Simple Button pressed')}
-      >
-        <Text style={{textAlign: 'center'}}>Cadastrar</Text>
-      </TouchableOpacity>
+      <View style={{
+        flex: 1,
+        justifyContent: 'center',
+      }}>
+        <Image  
+          style={styles.logo}
+          source={logo}
+        />
+      </View>
+      <View style={{
+        flex: 1,
+        justifyContent: 'flex-star',
+        width: '100%',
+        alignItems: 'center',
+      }}>
+        <TouchableOpacity
+          style={styles.btnEntrar}
+          onPress={() => Alert.alert('Simple Button pressed')}
+        >
+          <Text style={styles.textEntrar}>Entrar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.btnCadastrar}
+          onPress={() => Alert.alert('Simple Button pressed')}
+        >
+          <Text style={styles.textCadastrar}>Cadastrar</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
