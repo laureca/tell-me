@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Login from './src/pages/Login'
+import Cadastro from './src/pages/Cadastro'
 
 export default function App() {
   return (
-    <Login />
+    <Cadastro />
   )
 }
