@@ -19,6 +19,11 @@ const styles = StyleSheet.create({
     height: 40,
     width: 46,
   },
+  title: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    marginTop: 40,
+  },
   campoTexto:{
     height: 40,
     width: '85%',
@@ -80,7 +85,7 @@ export default function Cadastro() {
           style={styles.icon}
           source={icon}
         />
-        <Text>Crie sua conta</Text>
+        <Text style={styles.title}>Crie sua conta</Text>
       </View>
       <View style={{
         flex: 6,
