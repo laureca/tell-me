@@ -14,32 +14,27 @@ export default function Cadastro() {
         <TextInput
           style={styles.campoTexto}
           onChangeText={text => onChangeText(text)}
-          autoCompleteType={'name'}
-          value={null}
+          value={"Nome"}
         />
         <TextInput
           style={styles.campoTexto}
           onChangeText={text => onChangeText(text)}
-          autoCompleteType={'email'}
-          value={null}
+          value={"Data de nascimento"}
         />
         <TextInput
           style={styles.campoTexto}
           onChangeText={text => onChangeText(text)}
-          autoCompleteType={'tel'}
-          value={null}
+          value={"E-mail ou celular"}
         />
         <TextInput
           style={styles.campoTexto}
           onChangeText={text => onChangeText(text)}
-          autoCompleteType={'password'}
-          value={null}
+          value={"Senha"}
         />
         <TextInput
           style={styles.campoTexto}
           onChangeText={text => onChangeText(text)}
-          autoCompleteType={'password'}
-          value={null}
+          value={"Confirmar senha"}
         />
       </View>
       <View style={{
@@ -70,7 +65,8 @@ const styles = StyleSheet.create({
     height: 40,
     width: '85%',
     borderBottomWidth: 2,
-    borderBottomColor: '#F2D43A', 
+    borderBottomColor: '#C8C8C8',
+    color: "#C8C8C8", 
   },
   btnProximo: {
     height: 40,
