@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
   },
-  logo: {
+  icon: {
     height: 40,
     width: 46,
   },
@@ -55,8 +55,6 @@ export default function Cadastro() {
       <View style={{
         flex: 1,
         justifyContent: 'center',
-        width: '100%',
-        alignItems: 'center',
       }}>
         <Image  
           style={styles.icon}
