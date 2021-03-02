@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   arrow: {
+    margin: 20,
     width: 22,
     height: 22,
   },
