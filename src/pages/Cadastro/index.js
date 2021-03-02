@@ -1,12 +1,70 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, Image, Button, Alert, TouchableOpacity, TextInput } from 'react-native';
 
+import icon from '../../assets/images/icone.png';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    alignItems: 'center',
+  },
+  logo: {
+    height: 40,
+    width: 46,
+  },
+  campoTexto:{
+    height: 40,
+    width: '85%',
+    borderBottomWidth: 2,
+    borderBottomColor: '#C8C8C8',
+    color: "#C8C8C8", 
+    marginBottom: 20,
+  },
+  btnProximo: {
+    height: 40,
+    width: '85%',
+    backgroundColor: '#F2D43A',
+    borderRadius: 10,
+    flexDirection: "column",
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 40,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.30,
+    shadowRadius: 4.65,
+    elevation: 8,
+  },
+  textProximo: {
+    textAlign: 'center',
+    color: 'white',
+    textTransform: 'uppercase',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+});
 
 export default function Cadastro() {
   return (
     <View style={styles.container}>
       <View style={{
         flex: 1,
+        justifyContent: 'center',
+        width: '100%',
+        alignItems: 'center',
+      }}>
+        <Image  
+          style={styles.icon}
+          source={icon}
+        />
+      </View>
+      <View style={{
+        flex: 2,
         justifyContent: 'center',
         width: '100%',
         alignItems: 'center',
@@ -54,43 +112,3 @@ export default function Cadastro() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: 'white',
-    alignItems: 'center',
-  },
-  campoTexto:{
-    height: 40,
-    width: '85%',
-    borderBottomWidth: 2,
-    borderBottomColor: '#C8C8C8',
-    color: "#C8C8C8", 
-  },
-  btnProximo: {
-    height: 40,
-    width: '85%',
-    backgroundColor: '#F2D43A',
-    borderRadius: 10,
-    flexDirection: "column",
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 40,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.30,
-    shadowRadius: 4.65,
-    elevation: 8,
-  },
-  textProximo: {
-    textAlign: 'center',
-    color: 'white',
-    textTransform: 'uppercase',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-});
