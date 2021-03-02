@@ -2,6 +2,7 @@ import * as React from 'react';
 import { StyleSheet, Text, View, Image, Button, Alert, TouchableOpacity, TextInput } from 'react-native';
 
 import icon from '../../assets/images/icone.png';
+import arrow from '../../assets/images/arrow.png';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,6 +10,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'white',
     alignItems: 'center',
+  },
+  arrow: {
+    width: 22,
+    height: 22,
   },
   icon: {
     height: 40,
@@ -54,15 +59,31 @@ export default function Cadastro() {
     <View style={styles.container}>
       <View style={{
         flex: 1,
+        justifyContent: 'star',
+        width: '100%',
+        alignItems: 'left',
+      }}>
+        <TouchableOpacity
+          style={styles.btnVoltar}
+          onPress={() => Alert.alert('Simple Button pressed')}
+        >
+          <Image source={arrow}  style={styles.arrow}/>
+        </TouchableOpacity>
+      </View>
+      <View style={{
+        flex: 1,
         justifyContent: 'center',
+        width: '100%',
+        alignItems: 'center',
       }}>
         <Image  
           style={styles.icon}
           source={icon}
         />
+        <Text>Crie sua conta</Text>
       </View>
       <View style={{
-        flex: 2,
+        flex: 6,
         justifyContent: 'center',
         width: '100%',
         alignItems: 'center',
@@ -94,7 +115,7 @@ export default function Cadastro() {
         />
       </View>
       <View style={{
-        flex: 1,
+        flex: 2,
         justifyContent: 'center',
         width: '100%',
         alignItems: 'center',
