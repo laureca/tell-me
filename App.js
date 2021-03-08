@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Cadastro from './src/pages/Cadastro'
+import Home from './src/pages/Home'
 
 export default function App() {
   return (
-    <Cadastro />
+    <Home />
   )
 }
