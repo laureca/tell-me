@@ -1,12 +1,13 @@
 import React from 'react';
-import {  Avatar, Button, Card, Title, StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, ScrollView } from 'react-native';
+import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 
 import logo from '../../assets/images/completa-amarela.png'
 
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: 'white',
+      backgroundColor: '#F9AF2F',
       alignItems: 'center',
       justifyContent: 'center',
       flexDirection: "column",
@@ -31,6 +32,21 @@ export default function Home() {
                     style={styles.logo}
                 />
             </View>
+            <ScrollView>
+                <View>
+                    <Card>
+                        <Card.Title title="Card Title"/>
+                        <Card.Content>
+                            <Title>Card title</Title>
+                            <Paragraph>Card content</Paragraph>
+                        </Card.Content>
+                        <Card.Actions>
+                            <Button>Dislike</Button>
+                            <Button>Compartilhar</Button>
+                        </Card.Actions>
+                    </Card>
+                </View>
+            </ScrollView>
         </View>
     );
 }
