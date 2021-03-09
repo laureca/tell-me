@@ -32,13 +32,16 @@ export default function Home() {
                     style={styles.logo}
                 />
             </View>
-            <ScrollView>
+            <ScrollView style={{
+                flex: 5,
+            }}>
                 <View>
                     <Card>
-                        <Card.Title title="Card Title"/>
                         <Card.Content>
-                            <Title>Card title</Title>
-                            <Paragraph>Card content</Paragraph>
+                            <Avatar.Image source={require('../../assets/images/postit.png')}/>
+                            <Title>Título da denuncia</Title>
+                            <Paragraph>Breve descrição denuncia, breve descrição da denuncia..</Paragraph>
+                            <Image source={require('../../assets/images/denuncia1.png')}/>
                         </Card.Content>
                         <Card.Actions>
                             <Button>Dislike</Button>
