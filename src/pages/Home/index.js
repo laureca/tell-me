@@ -16,6 +16,18 @@ const styles = StyleSheet.create({
         height: 40,
         width: 75,
     },
+    card: {
+        borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 5,
+        },
+        shadowOpacity: 0.34,
+        shadowRadius: 6.27,
+
+        elevation: 10,
+    },
 });
 
 export default function Home() {
@@ -36,7 +48,7 @@ export default function Home() {
                 flex: 5,
             }}>
                 <View>
-                    <Card>
+                    <Card style={styles.card}>
                         <Card.Content>
                             <Avatar.Image source={require('../../assets/images/postit.png')}/>
                             <Title>Título da denuncia</Title>
