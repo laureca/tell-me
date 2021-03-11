@@ -7,7 +7,7 @@ import logo from '../../assets/images/completa-amarela.png'
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#F9AF2F',
+      backgroundColor: 'white',
       alignItems: 'center',
       justifyContent: 'center',
       flexDirection: "column",
@@ -15,27 +15,32 @@ const styles = StyleSheet.create({
     logo: {
         height: 40,
         width: 75,
+        margin: 20,
     },
     card: {
         maxWidth: '85%', 
         borderRadius: 10,
+        marginBottom: 20,
         shadowColor: "#000",
         shadowOffset: {
-            width: 0,
-            height: 5,
+            width: 1,
+            height: 3,
         },
         shadowOpacity: 0.34,
         shadowRadius: 6.27,
 
-        elevation: 10,
+        elevation: 5,
+    },
+    avatarCard: {
     },
     tituloCard: {
         marginTop: 10,
     },
     imageCard: {
         width: '100%',
-        maxHeight: 215,
+        height: 215,
         marginTop: 15,
+        resizeMode: 'cover',
     },
 });
 
@@ -59,7 +64,7 @@ export default function Home() {
                 <View style={{alignItems: 'center'}}>
                     <Card style={styles.card}>
                         <Card.Content>
-                            <Avatar.Image source={require('../../assets/images/postit.png')}/>
+                            <Avatar.Image source={require('../../assets/images/postit.png')} style={styles.avatarCard}/>
                             <Title style={styles.tituloCard}>Título da denuncia</Title>
                             <Paragraph>Breve descrição denuncia, breve descrição da denuncia, breve descrição da denuncia, breve descrição da denuncia..</Paragraph>
                             <Card.Cover source={require('../../assets/images/denuncia1.png')} style={styles.imageCard}/>
@@ -71,7 +76,7 @@ export default function Home() {
                     </Card>
                     <Card style={styles.card}>
                         <Card.Content>
-                            <Avatar.Image source={require('../../assets/images/dgcabana.png')}/>
+                            <Avatar.Image source={require('../../assets/images/dgcabana.png')} style={styles.avatarCard}/>
                             <Title style={styles.tituloCard}>Título da denuncia</Title>
                             <Paragraph>Breve descrição denuncia, breve descrição da denuncia, breve descrição da denuncia, breve descrição da denuncia..</Paragraph>
                             <Card.Cover source={require('../../assets/images/denuncia2.png')} style={styles.imageCard}/>
