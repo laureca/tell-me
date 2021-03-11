@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
         width: 75,
     },
     card: {
+        maxWidth: '85%', 
         borderRadius: 10,
         shadowColor: "#000",
         shadowOffset: {
@@ -27,6 +28,14 @@ const styles = StyleSheet.create({
         shadowRadius: 6.27,
 
         elevation: 10,
+    },
+    tituloCard: {
+        marginTop: 10,
+    },
+    imageCard: {
+        width: '100%',
+        maxHeight: 215,
+        marginTop: 15,
     },
 });
 
@@ -47,13 +56,25 @@ export default function Home() {
             <ScrollView style={{
                 flex: 5,
             }}>
-                <View>
+                <View style={{alignItems: 'center'}}>
                     <Card style={styles.card}>
                         <Card.Content>
                             <Avatar.Image source={require('../../assets/images/postit.png')}/>
-                            <Title>Título da denuncia</Title>
-                            <Paragraph>Breve descrição denuncia, breve descrição da denuncia..</Paragraph>
-                            <Image source={require('../../assets/images/denuncia1.png')}/>
+                            <Title style={styles.tituloCard}>Título da denuncia</Title>
+                            <Paragraph>Breve descrição denuncia, breve descrição da denuncia, breve descrição da denuncia, breve descrição da denuncia..</Paragraph>
+                            <Card.Cover source={require('../../assets/images/denuncia1.png')} style={styles.imageCard}/>
+                        </Card.Content>
+                        <Card.Actions>
+                            <Button>Dislike</Button>
+                            <Button>Compartilhar</Button>
+                        </Card.Actions>
+                    </Card>
+                    <Card style={styles.card}>
+                        <Card.Content>
+                            <Avatar.Image source={require('../../assets/images/dgcabana.png')}/>
+                            <Title style={styles.tituloCard}>Título da denuncia</Title>
+                            <Paragraph>Breve descrição denuncia, breve descrição da denuncia, breve descrição da denuncia, breve descrição da denuncia..</Paragraph>
+                            <Card.Cover source={require('../../assets/images/denuncia2.png')} style={styles.imageCard}/>
                         </Card.Content>
                         <Card.Actions>
                             <Button>Dislike</Button>
