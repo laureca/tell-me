@@ -1,8 +1,10 @@
 import React from 'react';
-import { StyleSheet, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, View, Image, ScrollView, Dimensions } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 
 import logo from '../../assets/images/completa-amarela.png'
+
+const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
     container: {
@@ -48,19 +50,18 @@ export default function Home() {
     return (
         <View style={styles.container}>
             <View style={{
-                flex: 1,
                 justifyContent: 'center',
                 width: '100%',
+                height: windowHeight*0.15,
                 alignItems: 'center',
+                positon: 'fixed',
             }}>
                 <Image
                     source={logo}
                     style={styles.logo}
                 />
             </View>
-            <ScrollView style={{
-                flex: 5,
-            }}>
+            <ScrollView style={{height: windowHeight*0.85}}>
                 <View style={{alignItems: 'center'}}>
                     <Card style={styles.card}>
                         <Card.Content>
