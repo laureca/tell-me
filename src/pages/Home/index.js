@@ -1,8 +1,13 @@
 import React from 'react';
-import { StyleSheet, View, Image, ScrollView, Dimensions } from 'react-native';
+import { StyleSheet, View, Image, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 
 import logo from '../../assets/images/completa-amarela.png'
+import home from '../../assets/images/menu-home.png'
+import search from '../../assets/images/menu-search.png'
+import report from '../../assets/images/menu-report.png'
+import notifications from '../../assets/images/menu-notifications.png'
+import profile from '../../assets/images/menu-profile.png'
 
 const windowHeight = Dimensions.get('window').height;
 
@@ -14,6 +19,13 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       flexDirection: "column",
     },
+    header:{
+        justifyContent: 'center',
+        width: '100%',
+        height: windowHeight*0.12,
+        alignItems: 'center',
+        positon: 'fixed',
+    },
     logo: {
         height: 40,
         width: 75,
@@ -22,7 +34,8 @@ const styles = StyleSheet.create({
     card: {
         maxWidth: '85%', 
         borderRadius: 10,
-        marginBottom: 20,
+        marginBottom: 15,
+        marginTop: 10,
         shadowColor: "#000",
         shadowOffset: {
             width: 1,
@@ -44,24 +57,29 @@ const styles = StyleSheet.create({
         marginTop: 15,
         resizeMode: 'cover',
     },
+    footer: {
+        height: windowHeight*0.10,
+        alignItems: 'center',
+        positon: 'fixed',
+        flexDirection: 'row',
+    },
+    imageFooter: {
+        width: 25,
+        height: 25,
+        margin: 22.5,
+    },
 });
 
 export default function Home() {
     return (
         <View style={styles.container}>
-            <View style={{
-                justifyContent: 'center',
-                width: '100%',
-                height: windowHeight*0.15,
-                alignItems: 'center',
-                positon: 'fixed',
-            }}>
+            <View style={styles.header}>
                 <Image
                     source={logo}
                     style={styles.logo}
                 />
             </View>
-            <ScrollView style={{height: windowHeight*0.85}}>
+            <ScrollView style={{height: windowHeight*0.78}}>
                 <View style={{alignItems: 'center'}}>
                     <Card style={styles.card}>
                         <Card.Content>
@@ -89,6 +107,23 @@ export default function Home() {
                     </Card>
                 </View>
             </ScrollView>
+            <View style={styles.footer}>
+                <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
+                    <Image source={home} style={styles.imageFooter}/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
+                    <Image source={search} style={styles.imageFooter}/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
+                    <Image source={report} style={styles.imageFooter}/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
+                    <Image source={notifications} style={styles.imageFooter}/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => Alert.alert('Simple Button pressed')}>
+                    <Image source={profile} style={styles.imageFooter}/>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
